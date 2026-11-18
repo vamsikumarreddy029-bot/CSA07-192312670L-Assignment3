@@ -1,0 +1,7 @@
+File bytes sent: 960000
+Integrity verified (SHA-256): True
+Chat request: Please confirm image received
+Server chat response: PLEASE CONFIRM IMAGE RECEIVED
+Local transfer elapsed: 54.43 ms (includes local processing; not a 4G benchmark)
+Impairment model: RTT=100 ms; assumed random loss=5%; sampled lost datagrams in 100-trial model=5
+Important: localhost TCP delivery itself was not subjected to tc netem; loss count is a separate seeded model, not a packet capture.

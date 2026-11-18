@@ -1,0 +1,13 @@
+M/M/1 results:
+load  500 pkt/s: rho 0.50 L    1.0 pkts W    2.0 ms
+load  800 pkt/s: rho 0.80 L    4.0 pkts W    5.0 ms
+load  900 pkt/s: rho 0.90 L    9.0 pkts W   10.0 ms
+load  950 pkt/s: rho 0.95 L   19.0 pkts W   20.0 ms
+load  990 pkt/s: rho 0.99 L   99.0 pkts W  100.0 ms
+load 1000 pkt/s: unstable, queue grows without limit
+450 pkt/s delay=1.818 ms; 900 pkt/s delay=10.000 ms; ratio=5.50x (not 10x under stated M/M/1 inputs)
+Token bucket burst: 1 MB = 8 Mb; excess rate = 10-2 = 8 Mbps; burst duration = 1.00 s
+For lambda=1500 pkt/s and W<10ms, mu must be > 1600 pkt/s
+Doubled link: mu=2000, lambda=1800 => W=5.0 ms
+Queue simulation (seeded, video mean delay): FIFO=1.79 ms; non-preemptive video priority=1.28 ms
+Note: queue simulation uses generated Poisson arrivals and exponential service; it is a model, not a measurement from a physical router.

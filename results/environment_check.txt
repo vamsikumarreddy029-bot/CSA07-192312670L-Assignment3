@@ -1,0 +1,10 @@
+Execution environment verification
+==================================
+OS: Linux x86_64, kernel 6.18.57
+Python: 3.13.5
+Matplotlib: 3.10.8
+Available: /usr/sbin/tc, /usr/bin/openssl
+Not installed: Wireshark, tshark, iperf3, dig, tcpdump
+Attempted: tc qdisc add dev lo root netem loss 1%
+Result: RTNETLINK answers: Operation not permitted (exit code 2)
+Conclusion: privileged traffic shaping and packet capture could not be performed in this execution environment. No such evidence is claimed in the deliverable.

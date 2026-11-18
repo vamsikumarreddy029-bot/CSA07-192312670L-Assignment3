@@ -1,0 +1,14 @@
+Assumptions: one RTT for TCP setup, one RTT for each request/response; negligible transmission time.
+Non-persistent, one at a time                162 RTT =  8100 ms
+Persistent HTTP/1.1, no pipelining            82 RTT =  4100 ms
+Persistent HTTP/1.1, pipelining                3 RTT =   150 ms
+6 parallel non-persistent connections         30 RTT =  1500 ms
+
+With 80 objects combined into 8 bundles (9 total resources including HTML):
+Non-persistent, 8 bundles + HTML              18 RTT =   900 ms
+Persistent no-pipelining, 8 bundles + HTML    10 RTT =   500 ms
+
+Second visit: fresh max-age cache can avoid object requests; ETag revalidation still requires request/response RTTs.
+Added one-way-independent RTT delay 0 ms: effective RTT 50 ms; pipelined baseline 150 ms
+Added one-way-independent RTT delay 50 ms: effective RTT 100 ms; pipelined baseline 300 ms
+Added one-way-independent RTT delay 200 ms: effective RTT 250 ms; pipelined baseline 750 ms
